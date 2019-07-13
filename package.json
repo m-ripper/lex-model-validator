@@ -1,0 +1,40 @@
+{
+  "name": "lex-model-validator",
+  "version": "1.0.0",
+  "description": "Validate lex-language-models with ease.",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "tsc --watch",
+    "lint": "tslint --project ./",
+    "cli": "lex-model-validator"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "@types/jest": "^24.0.15",
+    "@types/lodash.get": "^4.4.6",
+    "jest": "^24.8.0",
+    "prettier": "1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "keywords": [
+    "aws",
+    "lex",
+    "aws-lex",
+    "validator",
+    "model",
+    "model-validator",
+    "language-model"
+  ],
+  "author": "Veake <https://github.com/Veake> (max@jovo.tech)",
+  "license": "ISC",
+  "bin": {
+    "lex-model-validator": "./dist/src/cli.js"
+  }
+}

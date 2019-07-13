@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "WorkingExample",
+    "version": "1",
+    "intents": [
+      {
+        "name": "ResetIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "abracadabra",
+          "reset",
+          "new user"
+        ],
+        "slots": []
+      },
+      {
+        "name": "GoBackIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "one step back",
+          "retry",
+          "the previous one",
+          "try again",
+          "return",
+          "go back",
+          "not what i said",
+          "wrong"
+        ],
+        "slots": []
+      },
+      {
+        "name": "PhoneNumberIntent",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "{phoneNumber}",
+          "my number is {phoneNumber}",
+          "it is {phoneNumber}",
+          "my phone number is {phoneNumber}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.NUMBER",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What phone number?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "phoneNumber"
+          }
+        ]
+      }
+    ],
+    "slotTypes": [
+      {
+        "name": "dateUnitType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "week",
+            "synonyms": [
+              "weeks"
+            ]
+          },
+          {
+            "value": "day",
+            "synonyms": [
+              "days"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      }
+    ],
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 300,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Goodbye."
+        }
+      ]
+    }
+  }
+}
