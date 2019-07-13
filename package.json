@@ -1,6 +1,6 @@
 {
   "name": "lex-model-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate lex-language-models with ease.",
   "main": "dist/src/index.js",
   "scripts": {
@@ -33,7 +33,15 @@
     "language-model"
   ],
   "author": "Veake <https://github.com/Veake> (max@jovo.tech)",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/Veake/lex-model-validator#readme",
+  "bugs": {
+    "url": "https://github.com/Veake/lex-model-validator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Veake/lex-model-validator.git"
+  },
   "bin": {
     "lex-model-validator": "./dist/src/cli.js"
   }
